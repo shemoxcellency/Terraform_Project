@@ -8,3 +8,9 @@ resource "google_storage_bucket" "input_bucket" {
   location = var.region
   force_destroy = true
 }
+
+resource "google_storage_bucket" "output_bucket" {
+  name = "${var.project_id}-output"
+  location = var.region
+  force_destroy = true
+}
